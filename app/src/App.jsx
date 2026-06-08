@@ -15,7 +15,7 @@ function App() {
       setError("");
 
       const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon?limit=100"
+        "https://pokeapi.co/api/v2/pokemon?limit=20"
       );
 
       if (!response.ok) {
