@@ -4,7 +4,7 @@ A Pokédex web application built with **React**, **Vite**, **Docker**, and **HAP
 
 ## Features
 
-- Display Pokémon from PokéAPI
+- Display first 20 Pokémon from PokéAPI
 - View Pokémon details on selection
 - Official artwork, types, abilities, and stats
 - Loading and error handling
