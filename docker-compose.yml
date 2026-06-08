@@ -1,0 +1,21 @@
+services:
+
+  app:
+    build:
+      context: ./app
+    container_name: pokedex-app
+
+  haproxy:
+    image: haproxy:lts
+    container_name: pokedex-haproxy
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    volumes:
+      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+      - ./certs/server.pem:/usr/local/etc/haproxy/certs/server.pem
+
+    depends_on:
+      - app
